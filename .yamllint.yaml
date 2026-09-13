@@ -1,0 +1,13 @@
+extends: default
+
+rules:
+  document-start:
+    present: false
+  braces:
+    forbid: non-empty
+  brackets:
+    forbid: non-empty
+  line-length: disable
+  # GitHub Actions reads `on:` as a key; yamllint's default would flag it as a truthy value.
+  truthy:
+    check-keys: false

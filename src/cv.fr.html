@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guillaume Leroy — CV</title>
+    <meta name="description" content="Platform Engineer &amp; SRE freelance — Kubernetes, GitOps, observabilité, plateformes LLM en production.">
+    <meta name="author" content="Guillaume Leroy">
+    <link rel="alternate" hreflang="en" href="cv.en.html">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="cv">
+      <nav class="lang-switch" aria-label="Langue">
+        <a href="cv.en.html" hreflang="en" lang="en">English version</a>
+      </nav>
+
+      <header class="identity">
+        <img class="photo" src="photo.jpg" alt="Photo de Guillaume Leroy" width="480" height="480">
+        <div>
+          <h1>Guillaume Leroy</h1>
+          <p class="headline">Platform Engineer &amp; SRE freelance</p>
+          <p class="tagline">Kubernetes · GitOps · Observabilité · Plateformes LLM en production</p>
+          <ul class="contact">
+            <li>Montpellier, France</li>
+            <li><a href="mailto:pro.guillaume.leroy@gmail.com">pro.guillaume.leroy@gmail.com</a></li>
+            <li><a class="icon-link icon-linkedin" href="https://www.linkedin.com/in/gleroypro">linkedin.com/in/gleroypro</a></li>
+            <li><a class="icon-link icon-github" href="https://github.com/leroyguillaume">github.com/leroyguillaume</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="layout">
+        <div class="primary">
+          <section id="profile">
+            <h2>Profil</h2>
+            <p>
+              Une dizaine d’années à construire, fiabiliser et observer des infrastructures de production.
+              Développeur de formation, passé à l’infrastructure et à la donnée : Kubernetes, GitOps,
+              observabilité et, aujourd’hui, plateformes LLM en production — serving GPU (KServe, Knative,
+              Kubeflow), passerelle centralisée (LiteLLM) et cycle de vie des modèles (MLflow), le tout déployé en
+              GitOps avec ArgoCD. Je dirige THEREALM, cabinet de conseil en observabilité, CI/CD et infrastructures
+              data à l’échelle, et j’enseigne le cloud, la CI/CD et Rust à EPITECH et Polytech Montpellier.
+            </p>
+          </section>
+
+          <section id="experience">
+            <h2>Expérience</h2>
+
+            <article class="job">
+              <div class="job-head">
+                <h3>Thales</h3>
+                <p class="place">Toulouse</p>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <p class="role-title">Ingénieur plateforme</p>
+                  <p class="dates"><time datetime="2025-12">déc. 2025</time> – aujourd’hui</p>
+                </div>
+                <p>Plateforme LLM on-premise en production, opérée sur Kubernetes.</p>
+                <ul>
+                  <li>Exploitation de la plateforme d’inférence : déploiement, mise à jour et supervision des LLM servis sur GPU (KServe/Knative, Kubeflow).</li>
+                  <li>Optimisation de l’exécution des modèles sur GPU : débit, latence et taux d’occupation.</li>
+                  <li>Développement d’une passerelle LLM centralisée (LiteLLM) donnant aux équipes un accès unifié et gouverné aux modèles internes.</li>
+                  <li>Suivi du cycle de vie des modèles avec MLflow.</li>
+                  <li>Déploiement et exploitation de l’ensemble de la plateforme en GitOps avec ArgoCD.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <h3>BNP Paribas</h3>
+                <p class="place">Paris</p>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <p class="role-title">Technical Lead</p>
+                  <p class="dates"><time datetime="2025-01">janv. 2025</time> – <time datetime="2025-12">déc. 2025</time></p>
+                </div>
+                <ul>
+                  <li>Conception d’une offre « Airflow as a Service » pour les équipes data du groupe : architecture et stack de provisioning.</li>
+                  <li>Pilotage de la mise en œuvre : cadrage, priorisation et coordination des équipes.</li>
+                </ul>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <p class="role-title">Platform Engineer</p>
+                  <p class="dates"><time datetime="2024-02">févr. 2024</time> – <time datetime="2025-04">avr. 2025</time></p>
+                </div>
+                <ul>
+                  <li>Exploitation des instances Apache Airflow (Astronomer) sur clusters Kubernetes : déploiement, mises à jour et supervision.</li>
+                  <li>Développement de fonctionnalités Airflow répondant aux besoins spécifiques du groupe.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <h3>MadKudu</h3>
+                <p class="place">San Francisco, CA</p>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <p class="role-title">Site Reliability Engineer</p>
+                  <p class="dates"><time datetime="2023-01">janv. 2023</time> – <time datetime="2024-02">févr. 2024</time></p>
+                </div>
+                <ul>
+                  <li>Mise à l’échelle de l’infrastructure pour absorber ~200K requêtes/minute.</li>
+                  <li>Amélioration de l’observabilité de la plateforme ; optimisation des coûts AWS et Datadog.</li>
+                  <li>Migrations de CloudFormation vers Terraform et d’Elastic Beanstalk vers ECS.</li>
+                  <li>Déploiements en un clic, patchs de sécurité automatisés et mise en conformité SOC 2.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <h3>Ledger</h3>
+                <p class="place">Paris</p>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <p class="role-title">Site Reliability Engineer</p>
+                  <p class="dates"><time datetime="2022-03">mars 2022</time> – <time datetime="2023-01">janv. 2023</time></p>
+                </div>
+                <ul>
+                  <li>Amélioration de l’observabilité de la plateforme ; optimisation des coûts AWS et Datadog.</li>
+                  <li>Automatisation de la création d’environnements à la demande et conteneurisation des applications.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <h3>SpeSYS Services</h3>
+                <p class="place">Paris</p>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <p class="role-title">Team Leader</p>
+                  <p class="dates"><time datetime="2021-09">sept. 2021</time> – <time datetime="2022-03">mars 2022</time></p>
+                </div>
+                <ul>
+                  <li>Management d’une équipe dédiée à la mise en place d’infrastructures.</li>
+                </ul>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <p class="role-title">Site Reliability Engineer</p>
+                  <p class="dates"><time datetime="2019-12">déc. 2019</time> – <time datetime="2022-03">mars 2022</time></p>
+                </div>
+                <ul>
+                  <li>Exploitation d’infrastructures de services publics : Direction des Contrôles Automatisés (DCA) et Direction Générale de l’Aviation Civile (DGAC).</li>
+                  <li>Gestion d’une plateforme data pour la DCA.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <h3>Netheos</h3>
+                <p class="place">Montpellier</p>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <p class="role-title">DevOps</p>
+                  <p class="dates"><time datetime="2018-11">nov. 2018</time> – <time datetime="2019-12">déc. 2019</time></p>
+                </div>
+                <ul>
+                  <li>Développement d’une plateforme de vérification de pièces justificatives basée sur du machine learning.</li>
+                  <li>Chaînes CI/CD et automatisation du déploiement d’environnements à la demande.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <h3>Ollca</h3>
+                <p class="place">Rouen</p>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <p class="role-title">Lead DevOps</p>
+                  <p class="dates"><time datetime="2017-10">oct. 2017</time> – <time datetime="2018-11">nov. 2018</time></p>
+                </div>
+                <ul>
+                  <li>Développement d’une solution d’e-commerce pour les commerces de proximité.</li>
+                  <li>Chaînes CI/CD et configuration du Single Sign-On.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <h3>Saagie</h3>
+                <p class="place">Rouen</p>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <p class="role-title">DevOps</p>
+                  <p class="dates"><time datetime="2017-03">mars 2017</time> – <time datetime="2017-09">sept. 2017</time></p>
+                </div>
+                <ul>
+                  <li>Développement et déploiement d’une solution SaaS/on-premise facilitant l’industrialisation de l’analyse de données.</li>
+                </ul>
+              </div>
+            </article>
+          </section>
+        </div>
+
+        <aside class="secondary">
+          <section id="skills">
+            <h2>Compétences</h2>
+            <dl class="skills">
+              <dt>Kubernetes et GitOps</dt>
+              <dd>
+                <ul class="tags">
+                  <li>Kubernetes</li>
+                  <li>ArgoCD</li>
+                  <li>GitOps</li>
+                  <li>Helm</li>
+                </ul>
+              </dd>
+              <dt>MLOps et LLMOps</dt>
+              <dd>
+                <ul class="tags">
+                  <li>KServe</li>
+                  <li>Knative</li>
+                  <li>Kubeflow</li>
+                  <li>MLflow</li>
+                  <li>LiteLLM</li>
+                  <li>Inférence GPU</li>
+                  <li>Apache Airflow</li>
+                </ul>
+              </dd>
+              <dt>Observabilité</dt>
+              <dd>
+                <ul class="tags">
+                  <li>OpenTelemetry</li>
+                  <li>Prometheus</li>
+                  <li>Datadog</li>
+                </ul>
+              </dd>
+              <dt>Cloud et automatisation</dt>
+              <dd>
+                <ul class="tags">
+                  <li>AWS</li>
+                  <li>Terraform</li>
+                  <li>CI/CD</li>
+                </ul>
+              </dd>
+              <dt>Langages</dt>
+              <dd>
+                <ul class="tags">
+                  <li>Python</li>
+                  <li>Rust</li>
+                </ul>
+              </dd>
+            </dl>
+          </section>
+
+          <section id="open-source">
+            <h2>Open source</h2>
+            <div class="item">
+              <p class="item-title"><a href="https://github.com/therealm-tech/mire">mire</a></p>
+              <p class="item-sub">Rust · Apache-2.0</p>
+              <p>Mire de test pour endpoints de modèles : un binaire unique qui vérifie qu’un endpoint répond, applique l’authentification (tokens statiques, OIDC, login navigateur), renvoie la bonne forme et gère l’appel d’outils MCP.</p>
+            </div>
+            <div class="item">
+              <p class="item-title"><a href="https://github.com/therealm-tech/oas2mcp">oas2mcp</a></p>
+              <p class="item-sub">Rust · Apache-2.0</p>
+              <p>Transforme n’importe quelle spec OpenAPI en serveur MCP pilotable par des agents IA : rechargement à chaud, accès aux outils par rôle JWT, métriques OpenTelemetry, chart Helm.</p>
+            </div>
+          </section>
+
+          <section id="teaching">
+            <h2>Enseignement</h2>
+            <div class="item">
+              <p class="item-title">EPITECH Montpellier</p>
+              <p class="item-sub">Intervenant · depuis <time datetime="2023-09">sept. 2023</time></p>
+              <p>Déploiement cloud et CI/CD, masterclass Rust.</p>
+            </div>
+            <div class="item">
+              <p class="item-title">Polytech Montpellier</p>
+              <p class="item-sub">Intervenant · depuis <time datetime="2019-09">sept. 2019</time></p>
+              <p>Automatisation des tests et des déploiements par CI/CD.</p>
+            </div>
+          </section>
+
+          <section id="community">
+            <h2>Communauté</h2>
+            <div class="item">
+              <p class="item-title">GroupBees</p>
+              <p class="item-sub">DevRel · depuis <time datetime="2024-04">avr. 2024</time></p>
+            </div>
+            <div class="item">
+              <p class="item-title">Sunny Tech</p>
+              <p class="item-sub">Trésorier · depuis <time datetime="2024-09">sept. 2024</time></p>
+            </div>
+            <div class="item">
+              <p class="item-title">Montpellier Tech Hub</p>
+              <p class="item-sub">Vice-président · depuis <time datetime="2019-03">mars 2019</time></p>
+            </div>
+            <div class="item">
+              <p class="item-title">Cloud Native Montpellier</p>
+              <p class="item-sub">Co-fondateur · <time datetime="2023-06">juin 2023</time> – <time datetime="2024-06">juin 2024</time></p>
+            </div>
+            <div class="item">
+              <p class="item-title">Codeurs en Seine</p>
+              <p class="item-sub">Bénévole · <time datetime="2017-08">août 2017</time> – <time datetime="2018-08">août 2018</time></p>
+            </div>
+          </section>
+
+          <section id="education">
+            <h2>Formation</h2>
+            <div class="item">
+              <p class="item-title">Master Génie informatique logicielle</p>
+              <p class="item-sub">Université de Rouen Normandie · <time datetime="2015">2015</time> – <time datetime="2017">2017</time></p>
+            </div>
+            <div class="item">
+              <p class="item-title">Licence Informatique</p>
+              <p class="item-sub">Université de Rouen Normandie · <time datetime="2011">2011</time> – <time datetime="2014">2014</time></p>
+            </div>
+          </section>
+
+          <section id="languages">
+            <h2>Langues</h2>
+            <div class="item">
+              <p class="item-title">Français</p>
+              <p class="item-sub">Langue maternelle</p>
+            </div>
+            <div class="item">
+              <p class="item-title">Anglais</p>
+              <p class="item-sub">Capacité professionnelle</p>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>

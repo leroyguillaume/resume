@@ -1,0 +1,327 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: block;
+  src: url("../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: block;
+  src: url("../node_modules/@fontsource-variable/inter/files/inter-latin-ext-wght-normal.woff2")
+    format("woff2-variations");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  --ink: #1c2530;
+  --muted: #5d6775;
+  --accent: #0e5a6b;
+  --rule: #d8dee4;
+  --tag: #e9f1f3;
+  --paper: #ffffff;
+
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 100%;
+  line-height: 1.45;
+  font-feature-settings: "cv11", "ss01";
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+p,
+ul,
+dl,
+dd {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cv {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3rem;
+}
+
+.lang-switch {
+  margin-bottom: 1rem;
+  font-size: 0.8125rem;
+  text-align: right;
+}
+
+.lang-switch a {
+  color: var(--accent);
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.photo {
+  flex: none;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.headline {
+  margin-top: 0.25rem;
+  color: var(--accent);
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+.tagline {
+  color: var(--muted);
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.125rem 1.25rem;
+  margin-top: 0.625rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8125rem;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+
+/* A background image, not a mask tinted with currentColor: Chromium fetches mask-image with CORS, which a
+   file:// page cannot pass, so the logos would silently vanish from both the browser view and the PDF. */
+.icon-link::before {
+  content: "";
+  flex: none;
+  width: 1em;
+  height: 1em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-linkedin::before {
+  background-image: url("../node_modules/bootstrap-icons/icons/linkedin.svg");
+}
+
+.icon-github::before {
+  background-image: url("../node_modules/bootstrap-icons/icons/github.svg");
+}
+
+.layout {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+h2 {
+  margin: 0 0 0.625rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+section + section {
+  margin-top: 1.25rem;
+}
+
+.job {
+  break-inside: avoid;
+}
+
+.job + .job {
+  margin-top: 0.875rem;
+}
+
+.job-head,
+.role-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0 0.75rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.place,
+.dates,
+.item-sub {
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+
+.dates {
+  font-variant-numeric: tabular-nums;
+}
+
+.role + .role {
+  margin-top: 0.375rem;
+}
+
+.role-title {
+  font-weight: 600;
+}
+
+.role > p:not(.role-title),
+.role ul {
+  margin-top: 0.125rem;
+}
+
+.role ul {
+  padding-left: 1rem;
+}
+
+.role li::marker {
+  color: var(--accent);
+}
+
+.skills dt {
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.skills dd + dt {
+  margin-top: 0.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  padding: 0.0625rem 0.4375rem;
+  border-radius: 0.25rem;
+  background: var(--tag);
+  font-size: 0.78rem;
+}
+
+.item {
+  break-inside: avoid;
+}
+
+.item + .item {
+  margin-top: 0.5rem;
+}
+
+.item-title {
+  font-weight: 600;
+}
+
+.item-title a {
+  color: var(--accent);
+}
+
+@media (min-width: 48rem) {
+  .cv {
+    padding: 2.5rem 2rem 4rem;
+  }
+
+  .identity {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .photo {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 17rem;
+    gap: 2.5rem;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  :root {
+    font-size: 9.4pt;
+  }
+
+  .cv {
+    max-width: none;
+    padding: 0;
+  }
+
+  .lang-switch {
+    display: none;
+  }
+
+  .identity {
+    flex-direction: row;
+    align-items: center;
+    gap: 6mm;
+  }
+
+  .photo {
+    width: 26mm;
+    height: 26mm;
+  }
+
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 31%;
+    gap: 7mm;
+    margin-top: 5mm;
+  }
+}

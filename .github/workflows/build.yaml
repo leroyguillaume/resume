@@ -1,0 +1,53 @@
+name: build
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/**
+      - scripts/**
+      - package.json
+      - package-lock.json
+      - .node-version
+      - .github/workflows/build.yaml
+  pull_request:
+    paths:
+      - src/**
+      - scripts/**
+      - package.json
+      - package-lock.json
+      - .node-version
+      - .github/workflows/build.yaml
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pdf:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+      - name: set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020  # v7.0.0
+        with:
+          node-version-file: .node-version
+      - name: install npm dependencies
+        run: npm ci
+      - name: install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+      - name: render the PDFs
+        run: npm run build
+      - name: upload the PDFs
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: resume-pdf
+          path: dist/*.pdf
+          if-no-files-found: error

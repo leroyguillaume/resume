@@ -1,0 +1,49 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+        exclude: ^package-lock\.json$
+      - id: check-merge-conflict
+      - id: detect-private-key
+
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.38.0
+    hooks:
+      - id: yamllint
+        args:
+          - --strict
+
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.12
+    hooks:
+      - id: actionlint-system
+
+  # Biome and tsc run from node_modules rather than biomejs/pre-commit so package-lock.json stays
+  # the single source of their versions. The Playwright suite runs in CI, not here.
+  - repo: local
+    hooks:
+      - id: shellcheck
+        name: shellcheck
+        entry: shellcheck
+        language: system
+        types:
+          - shell
+      - id: biome
+        name: biome
+        entry: node_modules/.bin/biome check --no-errors-on-unmatched --files-ignore-unknown=true
+        language: system
+        types_or:
+          - ts
+          - json
+          - css
+      - id: tsc
+        name: tsc
+        entry: node_modules/.bin/tsc --noEmit
+        language: system
+        types:
+          - ts
+        pass_filenames: false
