@@ -1,6 +1,6 @@
 {
   "name": "resume",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "description": "Guillaume Leroy's résumé in English and French, rendered to PDF",
   "author": "Guillaume Leroy <pro.guillaume.leroy@gmail.com>",
