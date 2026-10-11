@@ -22,8 +22,8 @@
     "bootstrap-icons": "1.13.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.13",
-    "@playwright/test": "1.63.0",
+    "@biomejs/biome": "2.5.15",
+    "@playwright/test": "1.64.0",
     "@types/node": "24.13.4",
     "typescript": "7.0.2"
   }
